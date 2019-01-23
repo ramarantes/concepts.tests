@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import Cep from './components/Cep'
+import Cep from './components/Cep/Cep'
 import Loading from './components/Loading'
 
 class App extends Component {
@@ -17,7 +16,7 @@ class App extends Component {
 
   modal = () => {
       this.setState({loading: !this.state.loading});
-      setTimeout(() => this.feliz(this), 3000);
+      //setTimeout(() => this.feliz(this), 3000);
   };
 
 
@@ -25,7 +24,7 @@ class App extends Component {
     var loading = this.state.loading;
     return (
       <div className="App">
-        <Cep consulta="84600066" click={this.modal}></Cep>
+        <Cep loading={this.modal}></Cep>
         <Loading show={this.state.loading ? "show" : ""}/>
         
       </div>
