@@ -4,14 +4,15 @@ import './Loading.css'
 export default class Loading extends React.Component{
     constructor(props){
         super(props);
-        this.state = {show: false};
+       // this.state = {show: false};
     }
 
     show = show =>{
-        this.setState(show);
+      //  this.setState(show);
     }
 
     render(){
+        
         const Div2 = styled.div`
             display:table-cell;
             vertical-align: middle;
