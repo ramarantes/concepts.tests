@@ -1,29 +1,30 @@
 import React from 'react'
 import styled from 'styled-components'
 import './Loading.css'
-export default class Loading extends React.Component{
-    constructor(props){
-        super(props);
-       // this.state = {show: false};
-    }
+import {withAppContext} from '../providers/AppProvider';
 
-    show = show =>{
-      //  this.setState(show);
-    }
-
-    render(){
-        
-        const Div2 = styled.div`
+const Div2 = styled.div`
             display:table-cell;
             vertical-align: middle;
         `;
-            return (
-            <div className={this.props.show == 'show'? 'loading loadingAtivo' : 'loading'}>
-            <Div2>
-                <i className="fas fa-spinner fa-spin fa-3x" ></i>
-            </Div2>
-            
-        </div>);
-    }
 
+
+function Debug (props){
+    return   <pre>{JSON.stringify(props.value, null, 2)}</pre> 
 }
+
+function Loading(props){
+    const {appContext} = props;
+    return (      
+        <div className={appContext.data.loading? 'loading loadingAtivo' : 'loading'}>
+        {/* <Debug value={props}/> */}
+        <Div2>
+            <i className="fas fa-spinner fa-spin fa-3x" ></i>
+        </Div2>   
+
+           
+        </div>          
+    )
+}
+
+export default withAppContext(Loading);
