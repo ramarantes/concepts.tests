@@ -4,6 +4,7 @@ import Cep from './components/Cep/Cep'
 import Loading from './components/Loading'
 import {Switch, Route} from 'react-router-dom'
 import Test from './classes/test'
+import LocalStorage from './components/LocalStorage/LocalStorage'
 
 import {AppProvider} from './providers/AppProvider'
 
@@ -35,6 +36,7 @@ class App extends Component {
       <div className="App">
         <Switch>
           <Route exact path='/cep' component={Cep}/> 
+          <Route exact path='/localstorage' component={LocalStorage}/> 
        
         </Switch>
 
