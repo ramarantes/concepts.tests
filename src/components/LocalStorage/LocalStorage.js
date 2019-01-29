@@ -13,6 +13,7 @@ export default class LocalStorage extends React.Component {
         qtOpened = ++qtOpened;
         localStorage.setItem(key,qtOpened);
         this.state = {qtOpened}
+        // teste
     }
     render(){
      
