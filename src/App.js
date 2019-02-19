@@ -4,7 +4,12 @@ import Cep from './components/Cep/Cep'
 import Loading from './components/Loading'
 import {Switch, Route} from 'react-router-dom'
 import Test from './classes/test'
+import LocalStorage from './components/LocalStorage/LocalStorage'
+import FlowList from './components/FlowList/FlowList'
 
+import {AppProvider} from './providers/AppProvider'
+
+//shit calls kkk
 class App extends Component {
   constructor(props){
       super(props);
@@ -25,19 +30,21 @@ class App extends Component {
       //setTimeout(() => this.feliz(this), 3000);
   };
 
-
   render() {
-    var loading = this.state.loading;
+    const {loading} = this.state;
     return (
+      <AppProvider> 
       <div className="App">
         <Switch>
           <Route exact path='/cep' component={Cep}/> 
-          {/* <Route exact path='/cep' render={(props) => <Cep {...props} loading={true}/>}/> */}
-
-        
+          <Route exact path='/localstorage' component={LocalStorage}/> 
+          <Route exact path='/flowlist' component={FlowList}/> 
         </Switch>
-        <Loading show={this.state.loading ? "show" : ""}/>
+
+        <Loading/>
+      
       </div>
+      </AppProvider>
     );
   }
 }
