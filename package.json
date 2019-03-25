@@ -3,12 +3,18 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@material-ui/core": "^3.9.0",
+    "@material-ui/core": "^3.9.2",
     "axios": "^0.18.0",
+<<<<<<< HEAD
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.11.2",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
+=======
+    "babel-polyfill": "^6.26.0",
+    "react": "^16.8.1",
+    "react-dom": "^16.8.1",
+>>>>>>> be72ab78261de367c86e391c285c38292382fe24
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
     "react-scripts": "^2.1.8",
